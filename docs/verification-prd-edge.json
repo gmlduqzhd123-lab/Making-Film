@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-04T13:50:50.467Z",
+  "checks": [
+    "PRD entry is available from home and the first Wizard step",
+    "Short or empty pasted text is rejected without creating a project",
+    "Pasted PRD extracts metadata, three features and 45 seconds",
+    "Image-free generation, immediate save, playback and regeneration",
+    "Source provenance and missing screenshot notice are visible",
+    "SRT and self-contained PRD project roundtrip",
+    "PRD-only standalone HTML and ZIP export work with zero image assets",
+    "First screenshot automatically fills PRD scenes and preserves edited narration",
+    "Opening PRD does not overwrite existing work",
+    "Upload quiz.txt extracts valid text and excludes future features",
+    "Upload quiz.md extracts valid text and excludes future features",
+    "Upload quiz.json extracts valid text and excludes future features",
+    "Upload quiz.docx extracts valid text and excludes future features",
+    "Upload quiz.hwpx extracts valid text and excludes future features",
+    "Upload stored.docx extracts valid text and excludes future features",
+    "Upload linebreak.docx extracts valid text and excludes future features",
+    "Upload utf16.txt extracts valid text and excludes future features",
+    "Invalid, empty, unsupported and oversized files fail visibly",
+    "Drop zone accepts a text file and creates a review",
+    "Edited source hides stale extraction until reanalysis",
+    "A pending file read cannot replace a newly selected input example",
+    "Pasted markup remains inert in extraction and preview",
+    "Tablet dialog remains within viewport and controls are accessible",
+    "No page errors, console errors or external requests"
+  ],
+  "passed": 24,
+  "errors": [],
+  "externalRequests": []
+}

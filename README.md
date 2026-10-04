@@ -4,6 +4,8 @@
 
 HTML / CSS / Vanilla JavaScript만 사용합니다. 빌드, npm 설치, 계정, API Key가 필요하지 않습니다. 서버·DB·Vercel·Supabase·Firebase와 외부 CDN 라이브러리는 사용하지 않습니다.
 
+**v1.1 추가:** PRD 파일 또는 붙여넣은 텍스트에서 웹앱 정보를 추출하고, 이미지 없이도 소개영상 초안을 바로 생성할 수 있습니다.
+
 ## 바로 실행하기
 
 1. 이 폴더 전체를 다운로드하거나 압축을 풉니다.
@@ -13,6 +15,14 @@ HTML / CSS / Vanilla JavaScript만 사용합니다. 빌드, npm 설치, 계정, 
 권장 환경은 최신 데스크톱 Chrome / Edge, 가로 화면 태블릿입니다. 앱은 `file://`에서도 실행되며 네트워크 연결을 요구하지 않습니다. 브라우저나 보안 설정이 파일의 LocalStorage를 제한하면 JSON 다운로드를 이용하세요. 다운로드한 HTML만 다른 폴더로 이동하면 편집기 CSS/JS를 찾을 수 없으므로 앱 폴더 전체를 함께 보관해야 합니다. 단독 HTML 영상 출력물은 한 파일만 옮겨도 됩니다.
 
 ## 첫 소개영상 만들기
+
+PRD가 있으면 홈의 **PRD로 영상 만들기** 또는 제작 화면 STEP 1의 **PRD 넣고 자동 작성**을 이용하세요. 파일을 선택하거나 본문을 붙여 넣고 **PRD 분석하기 → 추출 내용 확인 → 이 PRD로 영상 만들기**로 진행합니다. 자세한 형식과 업데이트 방법은 [PRD 사용 안내](docs/PRD-GUIDE.md)에 있습니다.
+
+TXT·MD·JSON(2MB 이하), DOCX·HWPX(12MB 이하)의 본문을 지원합니다. 본문은 20만 자 이하입니다. PDF·HWP는 텍스트를 붙여 넣어 주세요. 외부 AI 없이 항목·제목·목록을 읽는 방식이므로 추출한 기능과 추천 설정을 확인해 주세요. 문서의 그림·표 배치와 스캔 이미지 OCR은 가져오지 않습니다.
+
+PRD로 만든 초안에는 스크린샷이 없어도 9개 장면, 대본, 자막과 재생 화면이 생성됩니다. STEP 3에서 처음 이미지를 올리면 빈 장면에 자동 연결되며 수정한 대본은 유지됩니다. 기존 프로젝트를 보관하고 새 프로젝트로 생성합니다. 원문 전체는 저장하지 않고 추출 정보와 파일명 등 메타데이터만 프로젝트에 보관합니다.
+
+직접 입력하는 기존 방식은 아래와 같습니다.
 
 1. **내 웹앱 영상 만들기**를 선택합니다.
 2. **등록:** 이름, URL, 한 줄 소개, 분야, 교과, 학년, 활용 유형을 입력합니다. URL은 링크 용도이며 자동 분석하거나 화면을 캡처하지 않습니다.
@@ -94,6 +104,8 @@ ZIP은 클라이언트에서 작성하는 UTF-8 ZIP STORE 형식으로, CRC32를
 
 대상 저장소: [gmlduqzhd123-lab/Making-Film](https://github.com/gmlduqzhd123-lab/Making-Film)
 
+이 작업 폴더는 위 저장소에 연결되어 있습니다. 사용자의 요청에 따라 Codex에서 완료한 변경사항은 검증 후 `main`에 직접 반영하며, 기존 Pages 설정으로 배포됩니다. [GitHub 자동 반영 안내](docs/GITHUB-WORKFLOW.md). 아래는 직접 파일을 업로드하거나 새로 Pages를 설정할 때의 방법입니다.
+
 1. **이 폴더의 내용물**을 저장소의 루트에 올립니다. `index.html`이 저장소 루트에 있어야 합니다. `.git` 폴더는 업로드하지 않습니다.
 2. GitHub **Settings → Pages → Build and deployment**를 엽니다.
 3. Source를 **Deploy from a branch**, Branch를 **main**, Folder를 **/(root)**로 선택하고 Save합니다.
@@ -101,13 +113,7 @@ ZIP은 클라이언트에서 작성하는 UTF-8 ZIP STORE 형식으로, CRC32를
 
 참고: [GitHub 공식 Pages 배포 설정 안내](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-로컬 Git 저장소의 `main`과 `origin`은 이 저장소를 기준으로 준비했습니다. 원격 업로드와 실제 Pages 활성화는 별도 단계입니다. Git CLI를 이용한다면 프로젝트 폴더에서 다음을 실행합니다.
-
-```sh
-git add .
-git commit -m "Implement Yeopssam School Video Maker v1.0"
-git push -u origin main
-```
+직접 파일을 올리는 경우에는 v1.1 ZIP을 풀고 **내용물**을 저장소 루트에 덮어 올려 커밋합니다. ZIP 파일 자체나 상위 폴더를 올리지 않습니다. Pages가 `main / (root)`를 사용하도록 설정되어 있으면 커밋 후 다시 배포됩니다.
 
 앱과 출력 영상은 상대 경로를 사용합니다. `/Making-Film/` 같은 프로젝트 경로에서도 작동하며 화면 전환은 해시 경로로 처리하여 별도 라우팅 서버가 필요하지 않습니다. `.nojekyll`을 포함합니다. 실제 Pages URL은 배포 후 확인해야 하며, 현재 검증은 같은 하위 경로 구조의 로컬 정적 호스팅에서 수행했습니다.
 
@@ -119,13 +125,17 @@ css/                      # 색상, 레이아웃, UI, 편집, 반응형, 가독�
 js/app.js                 # 홈, 프로젝트 관리, 라우팅, 단축키
 js/store/projectStore.js  # 프로젝트, 저장, Undo/Redo
 js/modules/               # 콘티, 이미지·음악, 품질, 자막, 프롬프트, ZIP·출력
+js/modules/prdImporter.js # PRD 항목 추출, 텍스트·DOCX·HWPX 본문 읽기
 js/ui/editor.js           # Wizard, 장면 편집, 결과·타임라인 UI
+js/ui/prdImport.js        # PRD 입력, 추출 내용 확인, 초안 만들기
 js/ui/player.js           # 편집기와 내보내기가 공유하는 타임라인·애니메이션·음악
 data/                     # JSON 사전 + file:// 호환 오프라인 catalog.js
 sample-projects/          # 6개 독립 JSON 샘플
 assets/                   # 로고와 자체 제작 예시 화면
 tools/sync-catalog.cjs    # 선택적 유지보수 도구
 tests/e2e.cjs             # 개발용 브라우저 검증
+tests/prd-parser.cjs      # PRD 파서 검증 (Node 기본 모듈)
+tests/prd-e2e.cjs         # PRD 파일·초안·저장·출력 브라우저 검증
 docs/                     # PRD 대비표, 검증 기록, 사용법
 ```
 
@@ -137,10 +147,14 @@ docs/                     # PRD 대비표, 검증 기록, 사용법
 
 [검증 기록](docs/TEST-REPORT.md), [PRD 구현·미구현 체크리스트](docs/PRD-STATUS.md), [간단 사용 안내](docs/USER-GUIDE.md)를 확인하세요.
 
+v1.1 변경 검증은 [PRD 기능 검증 기록](docs/PRD-TEST-REPORT.md)에 정리했습니다. DOCX/HWPX 본문 읽기는 브라우저의 `DecompressionStream`과 `DOMParser`를 사용합니다. 지원하지 않는 브라우저에서는 TXT 저장 또는 붙여넣기를 안내합니다. 추가 라이브러리는 없습니다.
+
 개발용 테스트는 Node와 Playwright가 있는 환경에서 실행합니다. 앱 실행에 이 도구들은 필요하지 않습니다.
 
 ```sh
 node tests/e2e.cjs
+node tests/prd-parser.cjs
+node tests/prd-e2e.cjs
 ```
 
 Playwright가 다른 경로에 있으면 `PLAYWRIGHT_MODULE` 환경변수에 해당 모듈 경로를 지정할 수 있습니다. Chrome을 기본으로 사용하며 Edge는 `YVM_BROWSER_CHANNEL=msedge`로 검사할 수 있습니다. `YVM_TEST_OUTPUT`으로 테스트 산출물 위치를 정할 수 있습니다. 테스트의 임시 HTTP 서버는 Pages 상대 경로 검증에만 사용되며, 제품에는 서버가 포함되지 않습니다.

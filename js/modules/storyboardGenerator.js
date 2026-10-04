@@ -4,8 +4,7 @@
  Y.generate = p => {
    const copy=Y.catalog.copyTemplates[p.category] || Y.catalog.copyTemplates['기타'];
    const features=p.features.map(f=>f.trim()).filter(Boolean).slice(0,5), student=p.audience.includes('학생')&&!p.audience.includes('교사');
-   const titles=['새로운 질문',p.title,'이렇게 시작해요',...features.slice(0,3),'수업에 더하는 가치','함께 만드는 변화','지금 만나보세요'];
-   while(titles.length<9)titles.splice(3,0,'간편하게 활용해요');
+   const titles=['새로운 질문',p.title,'이렇게 시작해요',...[0,1,2].map(i=>features[i]||'간편하게 활용해요'),'수업에 더하는 가치','함께 만드는 변화','지금 만나보세요'];
    const classroom=p.classTime?`${p.classTime}분 수업`:'수업';
    const captions=[copy.hook,p.description || copy.main, student?'도전할 준비가 되었나요?':`${p.grade} · ${p.subject} · ${p.usage}`, ...[0,1,2].map(i=>features[i] || '쉽게 시작하는 수업'),student?'함께 도전하고 성장해요':'학생의 참여가 수업의 변화로','좋은 수업을 더 많은 교실에',copy.cta];
    const narrations=[copy.hook,`${p.title}. ${p.description || copy.main}`,student?`${p.title}와 함께 첫 도전을 시작해 보세요.`:`${p.grade} ${p.subject} ${classroom}에서 ${p.usage} 활동으로 활용해 보세요.`,...[0,1,2].map(i=>features[i]?`${features[i]}. ${student?'친구들과 직접 도전해 보세요.':'수업의 흐름에 맞게 활용해 보세요.'}`:'필요한 화면을 선택하고 활동을 시작하세요.'),features.length>3?`또한 ${features.slice(3).join(', ')}까지 함께 경험할 수 있습니다.`:student?'친구와 함께 도전하며 새로운 경험을 쌓아 보세요.':'직접 참여하는 활동으로 배움의 경험을 넓혀 보세요.','선생님이 만든 좋은 수업이 더 많은 교실에 닿도록.',`${p.title}. ${copy.cta}`];

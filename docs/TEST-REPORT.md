@@ -1,5 +1,7 @@
 # v1.0 동작 검증 기록
 
+v1.1 PRD 입력 기능과 추가 회귀 검증은 [PRD-TEST-REPORT.md](PRD-TEST-REPORT.md)에 있습니다. 아래는 v1.0의 원래 검증 기록입니다.
+
 검증일: 2026-10-04 (Asia/Seoul).
 
 ## 결과
