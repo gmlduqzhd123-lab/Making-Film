@@ -27,7 +27,19 @@
 
 기존 30개 회귀 검사는 이미지·장면 편집, 순서·시간, 저장·Undo, 샘플, 음원·효과, 자막·프롬프트·HTML·ZIP 출력과 `/Making-Film/` 하위 경로 정적 호스팅을 포함합니다. 제품에 테스트 서버를 추가하지 않았습니다.
 
-DOCX/HWPX 검사는 표준 본문 XML과 ZIP 구조를 가진 생성된 테스트 문서를 사용했습니다. 모든 한컴·Word 문서나 실제 태블릿 기기의 호환성을 보장하는 검사는 아닙니다. 실사용 문서의 서식·이미지는 가져오지 않습니다. 실제 GitHub Pages의 업데이트 배포 후 확인은 원격 업로드 뒤 진행해야 합니다.
+DOCX/HWPX 검사는 표준 본문 XML과 ZIP 구조를 가진 생성된 테스트 문서를 사용했습니다. 모든 한컴·Word 문서나 실제 태블릿 기기의 호환성을 보장하는 검사는 아닙니다. 실사용 문서의 서식·이미지는 가져오지 않습니다.
+
+## 실제 Pages 배포 후 확인
+
+2026-10-04에 연결된 GitHub 계정으로 `main`에 반영했습니다. GitHub에 만든 파일 트리 SHA와 검증한 로컬 파일 트리 SHA가 동일함을 확인했으며 로컬 `main`을 `origin/main`과 동기화했습니다.
+
+- 반영 커밋: [`c9758d7`](https://github.com/gmlduqzhd123-lab/Making-Film/commit/c9758d7f9f563b50fcbd915c5b0fc98554a93a67)
+- [Pages 배포 실행](https://github.com/gmlduqzhd123-lab/Making-Film/actions/runs/37208950013): `completed / success`
+- 공개 URL: [영상제작기](https://gmlduqzhd123-lab.github.io/Making-Film/)
+- Chrome에서 캐시를 끄고 실제 사이트를 점검: PRD 진입, 예시 PRD 분석과 향후 목록 제외, 이미지 없는 60초·9개 장면 생성, 실제 재생·정지, 내레이션 수정·JSON 다운로드, 콘솔·파일 로딩 확인 **6개 통과**
+- 페이지·콘솔 오류와 HTTP 400 이상 파일 응답 **0건**
+
+공개 사이트 결과는 `verification-pages-prd.json`에 기록했습니다. 이후 문서 갱신 커밋은 앱 실행 코드를 변경하지 않습니다.
 
 ## 재현
 

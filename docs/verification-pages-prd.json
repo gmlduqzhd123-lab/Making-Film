@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-04T14:23:18.983Z",
+  "url": "https://gmlduqzhd123-lab.github.io/Making-Film/#editor",
+  "passed": 6,
+  "checks": [
+    "Published homepage and new PRD entry load",
+    "Live PRD analysis reads metadata and excludes future features",
+    "Live image-free 60-second project creates nine scenes",
+    "Live timeline actually plays and pauses",
+    "Live scene editing and project JSON export work",
+    "No browser console/page errors or failed assets"
+  ],
+  "errors": [],
+  "failedRequests": []
+}
