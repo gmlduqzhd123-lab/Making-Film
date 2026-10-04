@@ -1,0 +1,4 @@
+/* Keep functional controls and explanatory copy readable on tablets. */
+.hint,.small,.badge,.local-badge,.hero-note,.label,label.field,.check-row label,.warning,.toast,.metric span,.save-status,.asset-drag-hint,.story-summary,.narration-text,.prompt-card p,.preview-head,.preview-head span,.step-button,.template-option,.dropzone strong,.dropzone small,.asset-card input,.scene-meta strong,.scene-meta small,.scene-fields label.field,.scene-fields textarea,.tab-row button,.result-actions button,.timeline-scene,.timeline-ruler,footer,.steps-strip span{font-size:14px}
+.scene-item img,.scene-thumb{flex-shrink:0}.timeline-scene{line-height:1.5}.scene-fields .actions{flex-wrap:wrap}
+@media(max-width:767px){.editor-header button{font-size:14px}.topbar .quiet{font-size:14px}.steps-strip span{font-size:14px}}

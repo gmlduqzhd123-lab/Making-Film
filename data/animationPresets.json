@@ -1,0 +1,31 @@
+{
+  "animations": [
+    "fade",
+    "crossfade",
+    "slowZoom",
+    "zoomOut",
+    "panLeft",
+    "panRight",
+    "slideUp",
+    "slideDown",
+    "parallax",
+    "textReveal",
+    "float",
+    "pulse",
+    "blurIn"
+  ],
+  "transitions": [
+    "fade",
+    "crossfade",
+    "slide",
+    "cut"
+  ],
+  "textAnimations": [
+    "fade",
+    "typewriter",
+    "slide",
+    "scale",
+    "wordReveal",
+    "lineReveal"
+  ]
+}

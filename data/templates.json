@@ -1,0 +1,50 @@
+[
+  {
+    "id": "Adventure",
+    "label": "모험형",
+    "color": "#23b5a9",
+    "bgm": "밝은 타악기와 모험의 리듬"
+  },
+  {
+    "id": "Emotional",
+    "label": "감동형",
+    "color": "#a66c87",
+    "bgm": "따뜻한 피아노와 잔잔한 현악"
+  },
+  {
+    "id": "Modern Education",
+    "label": "교육 홍보",
+    "color": "#3867f4",
+    "bgm": "가벼운 신시사이저와 경쾌한 리듬"
+  },
+  {
+    "id": "Game",
+    "label": "게임형",
+    "color": "#7959d4",
+    "bgm": "밝은 게임 사운드와 전자 리듬"
+  },
+  {
+    "id": "Cinematic",
+    "label": "영화 예고편",
+    "color": "#b68d4d",
+    "bgm": "천천히 고조되는 시네마틱 음악"
+  },
+  {
+    "id": "Traditional Korea",
+    "label": "한국 전통",
+    "color": "#b46b46",
+    "bgm": "가야금과 담백한 전통 리듬"
+  },
+  {
+    "id": "Retro",
+    "label": "복고형",
+    "color": "#d98542",
+    "bgm": "따뜻한 복고풍 밴드 음악"
+  },
+  {
+    "id": "Minimal",
+    "label": "미니멀",
+    "color": "#64748b",
+    "bgm": "차분한 앰비언트 음악"
+  }
+]
