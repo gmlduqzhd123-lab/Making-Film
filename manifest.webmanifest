@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "엽쌤스쿨 영상제작기",
+  "short_name": "영상제작기",
+  "description": "서버 없이 완성하는 교육 웹앱 소개영상. 스토리보드부터 HTML 영상까지.",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3867f4",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
