@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" data-qr-url="https://gmlduqzhd123-lab.github.io/Making-Film/">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="서버 없이 완성하는 교육 웹앱 소개영상. 스토리보드부터 HTML 영상까지.">
@@ -13,13 +13,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="영상제작기">
   <script src="ys-install.js"></script>
+  <script src="ys-qr.js"></script>
   <link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/editor.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/accessibility.css"><link rel="stylesheet" href="css/prd.css">
 </head>
 <body>
   <header class="topbar">
     <a href="#home" class="brand"><img src="assets/icons/logo.svg" alt="" width="36" height="36"><span>엽쌤스쿨 <b>영상제작기</b><small>YEOPSSAM SCHOOL VIDEO MAKER</small></span></a>
-    <nav aria-label="주 메뉴"><a href="#home">내 프로젝트</a><a href="#samples">샘플 둘러보기</a><button id="help" class="quiet">사용 방법</button><button type="button" class="primary small topbar-install" data-ys-install>📲 앱 설치</button></nav>
+    <nav aria-label="주 메뉴"><a href="#home">내 프로젝트</a><a href="#samples">샘플 둘러보기</a><button id="help" class="quiet" aria-label="사용 방법"><span class="mf-narrow" aria-hidden="true">❓</span><span class="mf-wide">사용 방법</span></button><button type="button" class="primary small topbar-install" data-ys-install>📲 <span class="mf-wide">앱 </span>설치</button><button type="button" class="small topbar-install topbar-qr" data-qr aria-label="QR 코드로 접속"><span class="mf-wide">📱 </span>QR</button></nav>
     <span class="local-badge"><i></i> 이 기기에서 안전하게</span>
   </header>
   <main id="app"></main>
