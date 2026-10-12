@@ -3,3 +3,4 @@
 .topbar nav .topbar-qr{margin-left:4px}
 .mf-narrow{display:none}
 @media(max-width:520px){.topbar{gap:8px;padding:0 12px}.topbar nav .quiet{padding:6px}.mf-wide{display:none}.mf-narrow{display:inline}.brand{font-size:14px}.topbar nav .topbar-install{padding:6px 10px;margin-left:4px}}
+.ys-credit a{text-decoration:underline;text-underline-offset:3px}
